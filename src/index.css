@@ -1,0 +1,466 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --bgDark: #11192C;
+  --bgGray: #192436;
+  --bgLightGray: rgba(30, 41, 59, 10);
+  --bgLight: #334155;
+  --bgGrayActive: #313131;
+  --textWhite: #ffffff;
+  --textGray: hsl(0, 0%, 80%);
+  --accent1: #06b6d4;
+  --accent2: #fe6eb7;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 5rem;
+  background-color: var(--bgDark);
+  color: var(--textWhite);
+  font-family: Roboto, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.selected {
+  background: var(--accent1);
+}
+
+.section-heading {
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+}
+
+.gray-p {
+  font-size: 0.75rem;
+  color: var(--textGray);
+  margin-top: 0.5rem;
+}
+
+.main-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--textWhite);
+}
+
+.heading {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.project-details-main-container {
+  width: 40rem;
+  height: 100%;
+  background-color: var(--bgGray);
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.detail-ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.detail-ul li {
+  border: 1px solid var(--textGray);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.detail-ul li:hover,
+.resolution-ul li:hover,
+.complication-ul li:hover,
+.output-ul li:hover {
+  border: 1px solid var(--accent1);
+  scale: 0.95;
+}
+
+.resolution-container,
+.complication-container,
+.output-container {
+  width: 100%;
+}
+
+.resolution-ul,
+.complication-ul,
+.output-ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.resolution-ul li,
+.complication-ul li,
+.output-ul li {
+  border: 1px solid var(--textGray);
+  padding: 0.5rem 1rem;
+  width: 33%;
+  list-style-type: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.count-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.revision-container,
+.render-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.revision-counter,
+.render-counter {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.revision-counter button,
+.render-counter button {
+  width: 2rem;
+  aspect-ratio: 1;
+  border: 1px solid var(--textGray);
+  background: none;
+  color: var(--textWhite);
+  border-radius: 0.5rem;
+  font-weight: 400;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.revision-counter button:hover,
+.render-counter button:hover {
+  background-color: var(--accent1);
+  scale: 0.95;
+}
+
+.interface {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.price-main-container {
+  width: 35rem;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background: var(--bgGray);
+  border-radius: 1rem;
+  padding: 2rem;
+
+}
+
+.brief-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bgDark);
+  padding: 2rem;
+  border-radius: 1rem;
+  gap: 1rem;
+}
+
+.brief-heading {
+  color: var(--textGray);
+}
+
+.brief-value {
+  font-weight: 600;
+}
+
+.brief-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price-text-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-description {
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+.main-price {
+  color: var(--accent1);
+  position: relative;
+  width: 5rem;
+  text-align: end;
+}
+
+.main-price::before {
+  position: absolute;
+  display: block;
+  content: "₺";
+  left: -1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.interior-main-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.interior-style-ul {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.interior-style-ul li {
+  border: 1px solid var(--textGray);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.4s ease;
+  animation: fadeInUp forwards 0.4s ease;
+  opacity: 0;
+}
+
+.interior-style-ul li:hover {
+  scale: 0.95;
+  border: 1px solid var(--accent1);
+}
+
+.interior-style-heading {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.room-count-main-container {
+  width: 100%;
+}
+
+.room-count-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: 0.4s ease;
+  animation: fadeInUp forwards 1.6s ease;
+  opacity: 0;
+}
+
+.room-count-container button {
+  width: 2rem;
+  aspect-ratio: 1;
+  border: 1px solid var(--textGray);
+  background: none;
+  color: var(--textWhite);
+  border-radius: 0.5rem;
+  font-weight: 400;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.room-count-container button:hover {
+  scale: 0.95;
+  background-color: var(--accent1);
+}
+
+.area-input-container {
+  width: 100%;
+  position: relative;
+}
+
+.area-input {
+  width: 90%;
+  height: 2.5rem;
+  position: relative;
+  border: 1px solid var(--textGray);
+  background: var(--bgLight);
+  border-radius: 0.25rem;
+  outline: none;
+  color: var(--textWhite);
+  padding-inline: 0.5rem;
+  transition: 0.4s ease;
+  animation: fadeInUp forwards 0.4s ease;
+  opacity: 0;
+}
+
+.area-input::-webkit-inner-spin-button,
+.area-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.area-input-container::after {
+  display: block;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "m²";
+  color: var(--textWhite);
+}
+
+.exterior-main-container {
+  width: 100%;
+}
+
+.exterior-style-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.exterior-style-ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+  transition: 0.4s ease;
+  animation: fadeInUp forwards 0.4s ease;
+  opacity: 0;
+}
+
+.exterior-style-li {
+  display: flex;
+  gap: 0.75rem;
+  border: 1px solid var(--textGray);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.4s ease;
+  animation: fadeInUp forwards 0.4s ease;
+  opacity: 0;
+}
+
+.exterior-style-li:hover {
+  border: 1px solid var(--accent1);
+  scale: 0.95;
+}
+
+.product-main-container {
+  width: 100%;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width:1300px) {
+
+  .interface {
+    flex-direction: column-reverse;
+  }
+
+  .price-main-container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:800px) {
+
+  html {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width:600px) {
+
+  html {
+    font-size: 10px;
+  }
+
+  .project-details-main-container {
+    width: 25rem;
+  }
+
+  .project-type .detail-ul,
+  .exterior-style-ul {
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+  }
+}
