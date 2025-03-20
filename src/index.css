@@ -451,11 +451,19 @@ a {
 @media screen and (max-width:600px) {
 
   html {
-    font-size: 10px;
+    font-size: 11px;
   }
 
   .project-details-main-container {
-    width: 25rem;
+    width: 33rem;
+  }
+
+  .area-input {
+    font-size: 1rem;
+  }
+
+  .project-type {
+    width: 100%;
   }
 
   .project-type .detail-ul,
