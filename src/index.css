@@ -418,6 +418,76 @@ a {
   width: 100%;
 }
 
+.animation-time-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.4s ease;
+  animation: fadeInUp forwards 0.4s ease;
+  opacity: 0;
+}
+
+.range-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.range-second-slider {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.range-second-slider li {
+  width: 0.75rem;
+  text-align: center;
+}
+
+.animation-time-range {
+  position: relative;
+  margin-top: 2rem;
+  width: 100%;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.animation-time-range::-webkit-slider-runnable-track {
+  background-color: var(--bgLight);
+}
+
+.animation-time-range::-webkit-slider-thumb {
+  position: relative;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 1rem;
+  aspect-ratio: 1;
+  background-color: var(--accent1);
+  border-radius: 50%;
+  border: 1px solid var(--textWhite);
+}
+
+.range-value {
+  position: absolute;
+  top: -0.25rem;
+  transform: translateX(-50%);
+  font-size: 0.75rem;
+  font-weight: bold;
+  background: var(--accent1);
+  padding: 5px 10px;
+  border-radius: 5px;
+  pointer-events: none;
+  transition: 0.4s ease;
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;

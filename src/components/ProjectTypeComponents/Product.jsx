@@ -8,9 +8,9 @@ const Product = () => {
     const { projectDetails, setProjectDetails } = useContext(ProjectContext)
 
     const increaseProductCount = () => {
-        projectDetails.productCount < 3 ?
+        projectDetails.productCount < 5 ?
             setProjectDetails(prev => ({ ...prev, productCount: prev.productCount + 1 })) :
-            setProjectDetails(prev => ({ ...prev, productCount: 3 }))
+            setProjectDetails(prev => ({ ...prev, productCount: 5 }))
     }
 
     const decreaseProductCount = () => {

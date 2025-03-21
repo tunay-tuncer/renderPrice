@@ -73,13 +73,18 @@ const PriceCalculator = (projectDetails, setProjectDetails, setPrice, setPriceWo
             basePrice *= 1.25
             break;
         case "Animation":
-            basePrice *= 2
-        default:
+            basePrice *= projectDetails.animationTime * 0.25 * projectDetails.renderCount * 0.5 * (projectDetails.revisionCount != 0 ? projectDetails.revisionCount : 1)
             break;
     }
 
+    if (projectDetails.project === "Product") {
+        basePrice *= projectDetails.productCount * 1.75
+    }
 
-    basePrice += projectDetails.revisionCount * (basePrice * 0.05);
+    if (projectDetails.revisionCount != 0) {
+
+        basePrice += projectDetails.revisionCount * (basePrice * 0.05);
+    }
     basePrice += projectDetails.renderCount * (basePrice * 0.1);
 
     // Round the final price

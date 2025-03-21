@@ -13,6 +13,7 @@ import Complication from "./components/Complication"
 import Revision from "./components/Revision"
 import RenderCount from "./components/RenderCount"
 import Output from "./components/Output"
+import AnimationTime from './components/animationTime';
 
 // React Icons 
 import { LuSettings2 } from "react-icons/lu";
@@ -48,7 +49,6 @@ const ProjectDetails = () => {
 
   const handleProjectSelection = (selection) => {
     setProjectDetails(prev => ({ ...prev, project: selection.heading }));
-    window.scrollTo({ top: 0, behavior: "smooth" })
   }
 
 
@@ -76,6 +76,7 @@ const ProjectDetails = () => {
         <Revision />
         <RenderCount />
       </div>
+      {projectDetails.outputFormat === "Animation" && <AnimationTime />}
     </div>
   )
 }

@@ -11,6 +11,7 @@ export const ProjectProvider = ({ children }) => {
         revisionCount: 2,
         renderCount: 1,
         outputFormat: "PNG",
+        animationTime: 5,
 
         interiorStyle: "Modern",
         roomCount: 1,
