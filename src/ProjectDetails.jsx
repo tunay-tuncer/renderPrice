@@ -13,7 +13,7 @@ import Complication from "./components/Complication"
 import Revision from "./components/Revision"
 import RenderCount from "./components/RenderCount"
 import Output from "./components/Output"
-import AnimationTime from './components/animationTime';
+import AnimationTime from './components/AnimationTime';
 
 // React Icons 
 import { LuSettings2 } from "react-icons/lu";
